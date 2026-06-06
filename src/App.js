@@ -228,15 +228,25 @@ function Hero({ revealVariant }) {
   return (
     <section id="home" className="min-h-screen relative flex items-center pt-24 md:pt-16 z-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 py-12 w-full">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealVariant} className="lg:col-span-7 flex flex-col justify-center text-center lg:text-right">
+        
+        {/* Left Copy */}
+        <motion.div 
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealVariant}
+          className="lg:col-span-7 flex flex-col justify-center text-center lg:text-right"
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 text-violet-500 text-xs md:text-sm font-bold border border-violet-500/20 mb-6 self-center lg:self-start">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             <span>مرحبًا بك في فضاء حمزة الحاكم الإبداعي</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight sm:leading-none mb-6">
-            معك <span className="bg-gradient-to-l from-violet-500 via-purple-400 to-emerald-400 bg-clip-text text-transparent">حمزة الحاكم</span> <br />
-            مؤسس <span className="text-white relative underline decoration-violet-500 decoration-wavy">نبض الإبداع</span>
+          {/* التعديل هنا: استخدام leading-loose وزيادة التباعد */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-loose sm:leading-[1.7] mb-6">
+            <span className="block mb-4">
+               معك <span className="bg-gradient-to-l from-violet-500 via-purple-400 to-emerald-400 bg-clip-text text-transparent">حمزة الحاكم</span>
+            </span>
+            <span className="text-white relative">
+               مؤسس نبض الإبداع
+            </span>
           </h1>
           
           <p className="text-slate-400 text-base sm:text-lg md:text-xl font-light mb-10 max-w-2xl leading-relaxed self-center lg:self-start">
